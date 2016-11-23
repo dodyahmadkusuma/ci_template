@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)http://formoid.com/demo-comment.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <title>Form Designer: Comment Form Demo</title>
+		
+		<meta name="keywords" content="demo, form, comment, capcha">
+		<meta name="description" content="Formoid software allows you to design slick forms for your website. Form designer download">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://formoid.com/favicon.ico">
+		<link type="text/css" rel="stylesheet" href="./addpost_files/css">
+		<link rel="stylesheet" href="./addpost_files/fontello.css">
+		<link rel="stylesheet" href="./addpost_files/main.css" type="text/css">
+		
+
+<script type="text/javascript" async="" src="./addpost_files/ga.js.download"></script><script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38414203-1']);
+_gaq.push(['_setDomainName', '.formoid.com']);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_setAllowHash', false]);
+if(document.cookie.match("(^|;\\s)__utma") && !/utmcsr=\(direct\)/.test(unescape(document.cookie))) {
+    _gaq.push(
+      ['_setReferrerOverride', ''],
+      ['_setCampNameKey', 'aaan'], 
+      ['_setCampMediumKey', 'aaam'], 
+      ['_setCampSourceKey', 'aaas'], 
+      ['_setCampTermKey', 'aaat'], 
+      ['_setCampContentKey', 'aaac'], 
+      ['_setCampCIdKey', 'aaaci']
+    )
+}
+
+_gaq.push(['_trackPageview']);  
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1071863997;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./addpost_files/conversion.js.download">
+</script></head><body class="demo-page" bgcolor="#ffffff"><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./addpost_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071863997/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+	
+
+
+	<input id="respond_desktop" type="radio" name="respond" class="respond" checked="checked">
+	<input id="respond_ipad" type="radio" name="respond" class="respond">
+	<input id="respond_iphone" type="radio" name="respond" class="respond">
+	<div id="block-main">
+		<div class="content">			
+			<section id="main-b">
+				<style>
+				.form-iframe{height:600px;}
+				</style>
+
+				<div class="module-title">
+					<div id="menu">
+						<a href="http://formoid.com/index.html">Home</a>
+						<a href="http://formoid.com/index.html#help">Quick Help</a>
+					</div>
+					<h3>Comment Form demo</h3>
+				</div>
+
+				<div class="respond">
+					<span>Change layout: </span>
+					<label for="respond_desktop"><i class="icon-desktop"></i></label>
+					<label for="respond_ipad"><i class="icon-tablet"></i></label>
+					<label for="respond_iphone"><i class="icon-mobile"></i></label>
+				</div>
+				
+<div id="select-skin">
+	Change theme: 
+	<span class="default selected">Default</span>
+	<span class="metro ">Metro</span>
+	<span class="flat ">Flat</span>
+	<span class="solid ">Solid</span>
+	<span class="biz ">Biz</span>
+</div>
+
+
+<script>
+	// get element by class name
+	function getByClass(matchClass, content) {
+	    var elems = document.getElementsByTagName('*'), i;
+	    for (i in elems) {
+	        if((' ' + elems[i].className + ' ').indexOf(' ' + matchClass + ' ')
+	                > -1) {
+	            return elems[i];
+	        }
+	    }
+	}
+
+	// get attribute
+    function getAttr(ele, attr) {
+        var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+        if( !result ) {
+            var attrs = ele.attributes;
+            var length = attrs.length;
+            for(var i = 0; i < length; i++)
+                if(attrs[i].nodeName === attr)
+                    result = attrs[i].nodeValue;
+        }
+        return result;
+    }
+
+	var skinSelects = document.getElementById('select-skin');
+	// getByClass('metro', skinSelects)
+
+	function changeSkin(name) {
+		// change icon highlight
+		var selected = getByClass('selected', skinSelects);
+			selected.className = selected.className.replace(/selected/g, '');
+
+		var newSelected = getByClass(name, skinSelects);
+		if(newSelected) {
+			newSelected.className += ' selected';
+		}
+
+		// change src iframe
+		var iframe = getByClass('form-iframe', document);
+		iframe.src = getAttr(iframe, 'src').replace(/\?[^\?]+$/,"") + '?skin=' + name;
+	}
+	
+
+	// click on skin btn event
+	var skinBtns = skinSelects.getElementsByTagName('span');
+	for(var k in skinBtns) {
+		skinBtns[k].onclick = function() {
+			if(this.className.indexOf('selected') == -1) {
+				changeSkin(this.className.replace('selected', '').replace(/\s+/g, ''));
+			}
+		}
+	}
+</script>				<div id="responsive-demo" style="text-align:center;">
+					<iframe class="form-iframe" src="./addpost_files/comment.html" __idm_frm__="491"></iframe>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+	<div id="block-demo">
+		<div class="content">
+			<section id="demo-b">
+			<div class="width25">
+				<div class="transparent10-demo">
+					<div class="icon-demo">
+						<a href="http://formoid.com/demo-registraion.html"><img src="./addpost_files/demo-registration-form.png" alt="jQuery Form generator"></a>
+					</div>
+					<h1>Registration form</h1>
+					<p>Metro theme demo</p>
+				</div>
+			</div>
+			<div class="width25">
+				<div class="transparent10-demo">
+					<div class="icon-demo">
+						<a href="http://formoid.com/demo-checkout.html"><img src="./addpost_files/demo-checkout-form.png" alt="CSS3 Forms Designer"></a>	
+					</div>
+					<h1>Checkout form</h1>
+					<p>Biz theme demo</p>
+				</div>						
+			</div>
+			<div class="width25">
+				<div class="transparent10-demo">
+					<div class="icon-demo">
+						<a href="http://formoid.com/demo-bug-report.html"><img src="./addpost_files/demo-bug-report.png" alt="HTML5 Form Builder"></a>
+					</div>					
+					<h1>Bug report</h1>
+					<p>Flat theme demo</p>
+				</div>					
+			</div>	
+			<div class="width25">
+				<div class="transparent10-demo">
+					<div class="icon-demo">
+						<a href="http://formoid.com/responsive.html"><img src="./addpost_files/demo-form-elements.png" alt="Responsive HTML Form"></a>							
+					</div>					
+					<h1>Form elements</h1>
+					<p>Solid theme responsive demo</p>
+				</div>					
+			</div>				
+			</section>
+		</div>
+	</div>	
+
+	<div id="block-footer">
+		<div class="content">
+		<section id="bottom-b">
+			<div id="footer-right">
+			<p>Copyright Formoid 2014 - All Rights Reserved</p>
+			</div>
+			<p><a href="http://formoid.com/terms.html">Terms</a> | <a href="http://formoid.com/privacy.html">Privacy</a></p>
+		</section>
+		</div>
+	</div>
+	
+
+
+</body></html>
